@@ -1,0 +1,18 @@
+<div class="content" style="height: 100%">
+  <ion-content padding>
+    <div class="blankSpace-md">
+    </div>
+    <div class="centralPart">
+      <h1 class="centered bigMarginBot horizontalCenter"><span style="color: blue">Bla</span><span style="color: grey">Bla</span><span style="color: red">App</span></h1>
+      <ion-item>
+        <ion-input [(ngModel)]="log" placeholder="Identifiant"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="passwd" type="password" placeholder="Mot de Passe"></ion-input>
+      </ion-item>
+      <p style="color:red">{{ error }}</p>
+      <button class="smallMarginTop centeredItem button-stable" ion-button (click)="login()" >Se connecter</button>
+      <button class="smallMarginTop centeredItem button-stable" ion-button (click)="register()">Nouveau compte</button>
+    </div>
+  </ion-content>
+</div>

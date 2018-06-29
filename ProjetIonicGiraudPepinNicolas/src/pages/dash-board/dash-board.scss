@@ -1,0 +1,44 @@
+page-dash-board {
+
+.scroll-content {
+    background-color: black;
+  }
+
+  .item {
+    background-color: black;
+    color: white;
+  }
+
+  h2 {
+    color: crimson;
+  }
+
+  div.bigHeader{
+    height : 15%;
+    color: crimson;
+  }
+
+  h1 ,h2, h3{
+    text-align: center;
+  }
+
+  .trajet{
+    border-radius: 25px;
+    border: 1px solid;
+    min-height: 100px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .trajet *{
+    margin: auto 0;
+  }
+
+  .leftAlign{
+    text-align: left;
+  }
+
+  .rightAlign{
+    text-align: right;
+  }
+}

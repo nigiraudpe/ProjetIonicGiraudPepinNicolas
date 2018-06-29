@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>trajetDetail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Votre trajet</h2>
+  <h4>Etapes</h4>
+  <ion-list>
+    <ion-item *ngFor="let villes of traj.etapes">
+      <p>{{ villes }}</p>
+    </ion-item>
+  </ion-list>
+  <div>
+      <h4>Conducteur</h4>
+      <p> Description voiture : {{ traj.descriptionVoiture }}</p>
+      <p> Nom du conducteur : {{ traj.conducteur.prenom + " " + traj.conducteur.nom }}</p>
+  </div>
+  <div *ngIf = "traj.passagers.length > 0">
+    <h4>Passagers</h4>
+    <ion-list>
+      <ion-item *ngFor="let pass of traj.passagers">
+        <p> {{ pass.prenom + " " + pass.nom}} </p>
+        <button ion-button round outline item-end> Commenter </button>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="traj.commentaires.length > 0">
+    <h4>Commentaires</h4>
+    <ion-list *ngFor="let comm of traj.commentaires">
+      <p ion-item>{{ comm.author.nom }} : {{ comm.text }}</p>
+    </ion-list>
+  </div>
+  <button ion-button round outline [disabled]="isDriver" (click)="switch()">{{ !isReserved ? 'Annuler' : 'Reserver' }}</button>
+</ion-content>

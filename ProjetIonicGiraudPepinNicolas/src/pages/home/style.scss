@@ -1,0 +1,41 @@
+page-home {
+  .blankSpace-md{
+    height : 20%;
+  }
+
+  .scroll-content {
+    background-color: black;
+  }
+
+  .item {
+    background-color: black;
+    color: white;
+  }
+
+  .centralPart{
+    height : 80%;
+    width : 80%;
+    margin: 0 auto;
+  }
+
+  .bigMarginBot{
+    margin-bottom: 10%;
+  }
+
+  .centered{
+    text-align: center;
+  }
+
+  .smallMarginTop{
+    margin-top: 3%!important;
+  }
+
+  .centeredItem{
+    margin: 0 auto;
+    display: block;
+  }
+
+  h1{
+    margin: auto;
+  }
+}

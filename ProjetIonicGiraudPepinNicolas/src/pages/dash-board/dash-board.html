@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar hideBackButton="true">
+    <ion-title>Tableau de bord</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="bigHeader">
+      <h1>Bienvenue sur BlaBlaApp </h1>
+    </div>
+    <ion-searchbar [(ngModel)]="cont" (keyup.enter)=resultSearch()>
+    </ion-searchbar>
+    <h2 class="title">Vos voyages (passagers)</h2>
+    <ion-list  style="margin-bottom: 50px">
+       <button ion-item *ngFor="let traj of loggedIn.trajetAsPassenger" (click)="accessDetail(traj,false)">
+         <ion-icon name="arrow-forward" item-end></ion-icon>
+         {{ traj.etapes[0] }} -> {{ traj.etapes[traj.etapes.length - 1] }} ({{ traj.dateDepart }})
+       </button>
+     </ion-list>
+     <h2 class="title">Vos voyages (conducteur)</h2>
+     <ion-list  style="margin-bottom: 50px">
+        <button ion-item *ngFor="let traj of loggedIn.trajetAsDriver" (click)="accessDetail(traj, true)">
+          <ion-icon name="arrow-forward" item-end></ion-icon>
+          {{ traj.etapes[0] }} -> {{ traj.etapes[traj.etapes.length - 1] }} ({{ traj.dateDepart}})
+        </button>
+      </ion-list>
+      <button ion-button (click)="newTraj()">Nouveau trajet</button>
+</ion-content>
